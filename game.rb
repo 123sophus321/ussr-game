@@ -1,2 +1,2 @@
-require_relative 'source/engine'
-include Engine
+require_relative 'source/game_process'
+Game_process.new
