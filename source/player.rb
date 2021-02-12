@@ -23,7 +23,7 @@ class Player
     end
   end
 
-  protected
+  private
 
   attr_writer :name
   attr_accessor :health

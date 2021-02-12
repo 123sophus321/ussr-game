@@ -10,24 +10,30 @@ class Rounds
   end
 
   def move
+
     while @player1.check_health > 0 && @player2.check_health > 0
       wait
       @shooter.shooting_timer(change_players)
       puts "###########"
-      puts "#{change_players.name} :  #{change_players.check_health.to_s}"
+      puts "#{@player1.name} :  #{@player1.check_health.to_s}"
+      puts "###########"
+      puts "#{@player2.name} :  #{@player2.check_health.to_s}"
       puts "###########"
       @round_number += 1
     end
   end
 
-
   private
-  
+
   def wait
-    puts "###########"
-    puts "ready???"
-    puts "###########"
+    puts "--------------------------"
+    puts "are you ready #{whose_move.name}??? -  type something"
+    puts "--------------------------"
     gets
+  end
+
+  def whose_move
+    change_players == @player1 ? @player2 : @player1
   end
 
   def change_players
