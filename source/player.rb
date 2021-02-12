@@ -1,5 +1,6 @@
 class Player
-  attr_reader :name
+  attr_accessor :name
+  attr_accessor :health
 
   def initialize(name)
     @name = name
@@ -16,15 +17,7 @@ class Player
   end
 
   def check_health
-    if @health > 0
-      @health
-    else
-      0
-    end
+     @health > 0 ? @health : 0
   end
 
-  private
-
-  attr_writer :name
-  attr_accessor :health
 end

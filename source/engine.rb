@@ -2,6 +2,9 @@ require_relative 'rounds'
 require_relative 'player'
 
 module Engine
+  def self.included(base)
+    let_the_battle_begin
+  end
 
   def let_the_battle_begin
     greetings

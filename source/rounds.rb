@@ -13,7 +13,7 @@ class Rounds
 
     while @player1.check_health > 0 && @player2.check_health > 0
       wait
-      @shooter.shooting_timer(change_players)
+      @shooter.shooting_timer(next_players)
       puts "###########"
       puts "#{@player1.name} :  #{@player1.check_health.to_s}"
       puts "###########"
@@ -33,14 +33,11 @@ class Rounds
   end
 
   def whose_move
-    change_players == @player1 ? @player2 : @player1
+    next_players == @player1 ? @player2 : @player1
   end
 
-  def change_players
-    if @round_number % 2 == 0
-      @player1
-    else
-      @player2
-    end
+  def next_players
+     @round_number % 2 == 0 ? @player1 : @player2
+
   end
 end
