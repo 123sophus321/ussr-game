@@ -1,7 +1,7 @@
 module ValidateName
 
   def validate!(name)
-
+    attr_accessor :name
     attempt = 0
     if name.length < 2
       raise "name should be at least 2 symbols "
@@ -13,6 +13,6 @@ module ValidateName
     retry if attempt < 3
     true
   end
-  private
-  attr_accessor :name
+
+
 end
