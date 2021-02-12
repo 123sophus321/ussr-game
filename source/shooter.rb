@@ -1,10 +1,5 @@
 class Shooter
 
-  # def initialize(player_target )
-  #   #  @player_shooter = player_shooter
-  #   @player_target =player_target
-  # end
-
   def shooting_timer(player_target)
     starting = Time.now
     puts starting
@@ -38,8 +33,6 @@ class Shooter
     if a + b + c == result
       puts "correct"
       true
-    else
-      puts "incorrect, you suks"
     end
   end
 end
