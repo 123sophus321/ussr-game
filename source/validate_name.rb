@@ -1,7 +1,6 @@
-module ValidateName
+module Abc
 
   def validate!(name)
-    attr_accessor :name
     attempt = 0
     if name.length < 2
       raise "name should be at least 2 symbols "
@@ -14,5 +13,11 @@ module ValidateName
     true
   end
 
-
+  def validate2
+    name =gets.chomp
+    while name.length < 2
+      name =gets.chomp
+    end
+    name
+  end
 end
